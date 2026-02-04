@@ -1,11 +1,11 @@
 ---
-version: 1
+version: 3
 dependencies:
   galaxy: requirements.yml
   python: requirements.txt
 
 additional_build_steps:
-  prepend: |
+  prepend_base: |
     RUN pip3 install --upgrade pip setuptools
-  append:
+  append_base:
     - RUN ls -la /etc
